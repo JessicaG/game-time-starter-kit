@@ -59,4 +59,29 @@ describe('Block', function () {
     assert.isFalse(block.canMoveDown());
   });
 
+  it('can move down where there is a current block', function () {
+    let block = new Block(this.board, 5, 5);
+    this.board.addBlock(block.x, block.y);
+    assert.isTrue(block.canMoveDown());
+  });
+
+  it('cannot move down where there is a current block', function () {
+    let block = new Block(this.board, 5, 5);
+    this.board.addBlock(block.x, block.y);
+    this.board.addBlock(block.x, block.y + 1);
+    assert.isFalse(block.canMoveDown());
+  });
+
+  it('cannot move left where there is a current block', function () {
+    let block = new Block(this.board, 5, 5);
+    this.board.addBlock();
+    assert.isFalse(block.canMoveLeft());
+  });
+
+  it('cannot move right where there is a current block', function () {
+    let block = new Block(this.board, 5, 5);
+    this.board.addBlock();
+    assert.isFalse(block.canMoveRight());
+  });  
+
  });
