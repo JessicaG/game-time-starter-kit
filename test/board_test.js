@@ -1,6 +1,7 @@
 import { assert } from 'chai';
 import Board from '../lib/board';
 import Block from '../lib/block';
+import Direction from '../lib/direction';
 
 describe('Board', function () {
 
@@ -76,8 +77,8 @@ describe('Board', function () {
 
     it('should should return true if block if there is a block left', function () {
       let board = new Board();
-      let block1 = new Block(board, 8, 5);
-      let block2 = new Block(board, 9, 5);
+      let block1 = new Block(board, 9, 5);
+      let block2 = new Block(board, 8, 5);
       board.blocks.push(block1)
       board.blocks.push(block2)
 
@@ -102,12 +103,42 @@ describe('Board', function () {
 
     it('should should return true if block if there is a block right', function () {
       let board = new Board();
-      let block1 = new Block(board, 8, 5);
-      let block2 = new Block(board, 7, 5);
+      let block1 = new Block(board, 7, 5);
+      let block2 = new Block(board, 8, 5);
       board.blocks.push(block1)
       board.blocks.push(block2)
 
       assert.isTrue(board.isBlockRight(block1));
+    });
+
+  });
+
+  describe('checkBlockSurrounding', function () {
+
+    it.skip('should find return false if there is not a block right', function () {
+      let board = new Board();
+      let block = new Block(board, 9, 5);
+      debugger;
+      let direction = new Direction
+      assert.equal(board.checkBlockSurrounding(block, direction), false);
+    });
+
+    it.skip('should should return false if block is to the far right of the board', function () {
+      let board = new Board();
+      let block = new Block(board, 10, 5);
+      let direction = right
+      assert.isFalse(board.checkBlockSurrounding(block, direction));
+    });
+
+    it.skip('should should return true if block if there is a block right', function () {
+      let board = new Board();
+      let block1 = new Block(board, 7, 5);
+      let block2 = new Block(board, 8, 5);
+      let direction = right
+      board.blocks.push(block1)
+      board.blocks.push(block2)
+
+      assert.isTrue(board.checkBlockSurrounding(block1, direction));
     });
 
   });

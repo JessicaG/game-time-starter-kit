@@ -74,13 +74,15 @@ describe('Block', function () {
 
   it('cannot move left where there is a current block', function () {
     let block = new Block(this.board, 5, 5);
-    this.board.addBlock();
+    this.board.addBlock(block.x, block.y);
+    this.board.addBlock(block.x - 1, block.y);
     assert.isFalse(block.canMoveLeft());
   });
 
   it('cannot move right where there is a current block', function () {
     let block = new Block(this.board, 5, 5);
-    this.board.addBlock();
+    this.board.addBlock(block.x, block.y);
+    this.board.addBlock(block.x + 1, block.y);
     assert.isFalse(block.canMoveRight());
   });  
 

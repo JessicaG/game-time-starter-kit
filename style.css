@@ -1,0 +1,41 @@
+.game-canvas {
+  border: 1px dashed;
+  margin: auto;
+  display: block;
+  background: #ddeeff;
+}
+
+.i-piece {
+	background: $cyan;
+	/*four straight*/
+}
+
+.j-piece {
+	background: $darkblue;
+	/*three across, one down*/
+}
+
+.l-piece {
+	background: $orange;
+	/*one down, three across*/
+}
+
+.o-piece {
+	background: $yellow;
+	/*two across, stacked*/
+}
+
+.s-piece {
+	background: $lime;
+	/*two across, two below, offset by 1, top left*/
+}
+
+.t-piece {
+	background: $purple;
+	/*three across, one down at 2nd */
+}
+
+.z-piece {
+	background: $red;
+	/*two across, two below, offset by 1, bottom left*/
+}
