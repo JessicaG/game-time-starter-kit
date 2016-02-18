@@ -1,41 +1,61 @@
 .game-canvas {
-  border: 1px dashed;
+  border: 3px solid #6587AB;
   margin: auto;
   display: block;
   background: #ddeeff;
 }
 
-.i-piece {
-	background: $cyan;
+.i-pattern {
+	background: cyan;
 	/*four straight*/
 }
 
-.j-piece {
-	background: $darkblue;
+.j-pattern {
+	background: darkblue;
 	/*three across, one down*/
 }
 
-.l-piece {
-	background: $orange;
+.l-pattern {
+	background: orange;
 	/*one down, three across*/
 }
 
-.o-piece {
-	background: $yellow;
+.o-pattern {
+	background: yellow;
 	/*two across, stacked*/
 }
 
-.s-piece {
-	background: $lime;
+.s-pattern {
+	background: lime;
 	/*two across, two below, offset by 1, top left*/
 }
 
-.t-piece {
-	background: $purple;
+.t-pattern {
+	background: purple;
 	/*three across, one down at 2nd */
 }
 
-.z-piece {
-	background: $red;
+.z-pattern {
+	background: red;
 	/*two across, two below, offset by 1, bottom left*/
+}
+
+.title { 
+	color: #0AFCDC; 
+	font-family: 'Righteous'; 
+	font-size: 65px; 
+	font-weight: normal; 
+	line-height: 60px; 
+	margin: 10px 0 20px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 0 #000, margin: 10px 0 24px;
+	text-align: center; 
+}
+
+body {
+  background: red; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, red, yellow); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, red, yellow); /* Standard syntax */
 }
